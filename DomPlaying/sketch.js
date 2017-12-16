@@ -1,15 +1,20 @@
 var radio1;
 var radio2;
 var restaurantSound;
-var description1 = 'While  advances in gastronomy and Virtual Reality have previously progressed in parallel fields, they are'
-var description2 = 'currently closer than ever to fusing. Project Nourished is the embodiment if this new concept, in'
-var description3 = 'which a VR environment is created in order to alter a diner"s sensory experience. This web app is a basic'
-var description4 = 'exercise that will get you thinking about how your environment affects your culinary experience. Bon appétit!'
+var description1 = 'While advances in gastronomy and Virtual Reality have previously progressed in parallel fields, they are currently'
+var description2 = 'closer than ever to fusing. Project Nourished is the embodiment if this new concept, in which a VR environment is'
+var description3 = 'created in order to alter a diner"s sensory experience. Jinsoo An leads a group of talented chefs, conceptual'
+var description4 = 'artists, technical designers, and molecular mixologists to work together to create unique culinary experiences. This'
+var description5 = 'web app is a basic exercise that will get you thinking about how your environment affects your culinary experience,'
+var description6 = 'just follow the directions below... bon appetit!'
 var photoX = 590
-var photoY = 480
-var photoPositionX = 115
-var photoPositionY = 240
-var textX = 420
+var photoY = 500
+var photoPositionX = 155
+var photoPositionY = 305
+var textX = 440
+var PNinfo1 = 'hello this is a test'
+var PNinfo2 = 'hello'
+var PNinfo3 = 'hello'
 
 function preload() {
   //photo preloads
@@ -28,8 +33,7 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(1000, 650);
-
+	createCanvas(1000, 680);
 
   radio1 = createRadio();
 	radio1.option('Myanmar, Burma', 1);
@@ -40,6 +44,7 @@ function setup() {
   radio1.style('font-size', '20px');
   radio1.style('cursor', 'pointer');
   radio1.style('radius', '0px');
+  radio1.style('font-family', 'serif');
 
   textAlign(CENTER);
 
@@ -51,15 +56,9 @@ function setup() {
   radio2.style('width', '1000px');
   radio2.style('font-size', '31px');
 
-  textAlign(CENTER);
-
 }
 
 function draw() {
-
-  //title
-  textSize(50);
-  text("VR x Gastronomy", textX, 60);
 
   //description
   textSize(17);
@@ -67,12 +66,25 @@ function draw() {
   text(description2, textX, 100);
   text(description3, textX, 120);
   text(description4, textX, 140);
-  //directions
-  text("1. Find a slightly bland item of food that you can take many homogenous bites of", textX, 160);
-  text("2. Isolate yourself as much as possible so that the variables in your environment have minimal effect", textX, 180);
-  text("3. Play around with combinations of sight and sound, each time taking a bite of your food", textX, 200);
-  text("4. Observe and enjoy!", textX, 220);
+  text(description5, textX, 160);
+  text(description6, textX, 180);
 
+  //directions
+  textSize(17);
+  text("1. Find a slightly bland item of food that you can take many homogenous bites of", textX, 230);
+  text("2. Isolate yourself as much as possible so that the variables in your environment have minimal effect", textX, 250);
+  text("3. Play around with combinations of sight and sound, each time taking a bite of your food", textX, 270);
+  text("4. Observe and enjoy!", textX, 290);
+
+  //title
+  textSize(50);
+  fill(107, 33, 168);
+  text("VR x Gastronomy", textX, 60);
+
+  //directions title
+  fill(33, 107, 168);
+  textSize(25);
+  text('Here"s where you come in!', textX, 210)
 
   //picture radio set
   var val1 = radio1.value();
